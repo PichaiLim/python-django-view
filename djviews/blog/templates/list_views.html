@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/blog/" method="get">
+        <input type="text" name="q" placeholder="Search">
+    </form>
+
+    <h1>list view</h1>
+    <h3>
+        <a href="/blog/create/">
+            create
+        </a>
+    </h3>
+    <!-- {{ object_list }} -->
+
+    {% for object in object_list %}
+    <li>
+        <a href="/blog/{{ s.id }}">
+            Link 1: {{ object.running_number }}
+        </a>
+        <!-- &nbsp;|&nbsp;
+        <a href="{% url 'blog:detail' id=object.id %}">
+            Link 2: {{ object.running_number}}
+        </a>
+        &nbsp;|&nbsp;
+        <a href="{{ object.get_absolute_url }}">
+            Link 3: {{ object.running_number}}
+        </a> -->
+    </li>
+    {% endfor %}
+</body>
+
+</html>

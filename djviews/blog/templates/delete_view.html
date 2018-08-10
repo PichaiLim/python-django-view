@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document: Delete</title>
+</head>
+<body>
+    <h1>Delete {{ object.running_number }}?</h1>
+    <form action="." method="POST">
+        {%csrf_token%}
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur officia commodi iusto dignissimos odio in provident quis accusamus corrupti libero voluptatibus dolorem, et itaque iste adipisci inventore! Tenetur, officiis.</p>
+        <input type="submit" value="Yes">
+        <a href="/blog/{{object.id}}/"> Cancel</a>
+    </form>
+</body>
+</html>
